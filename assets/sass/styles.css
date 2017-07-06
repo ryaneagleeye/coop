@@ -1,0 +1,141 @@
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -ms-overflow-style: scrollbar;
+  -webkit-tap-highlight-color: transparent; }
+
+* {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit; }
+  *::before, *::after {
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit; }
+
+body {
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 20px;
+  font-weight: normal;
+  line-height: 1.5;
+  color: #292b2c;
+  background-color: #fff; }
+
+.wrap {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1280px; }
+
+div.container {
+  margin-top: 200px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 15px;
+  padding-left: 15px; }
+  div.container h1 {
+    text-align: center;
+    color: #002B69;
+    font-size: 2.75em;
+    margin: 50px 0px; }
+  div.container .container-header {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center; }
+    div.container .container-header ul {
+      list-style-type: none;
+      float: none;
+      padding: 0px;
+      margin: 40px 0px; }
+      div.container .container-header ul li {
+        border: 2px solid #0570BC;
+        color: #0570BC;
+        padding: 30px 15px;
+        float: none;
+        width: 310px;
+        cursor: pointer;
+        font-family: "Calibri", "Helvetica Neue", sans-serif;
+        text-align: center;
+        font-weight: bold;
+        display: inline-flex;
+        height: 95px;
+        margin-left: -8px;
+        align-items: flex-start;
+        justify-content: center; }
+        div.container .container-header ul li .component-menu-item-text.longer {
+          position: relative;
+          top: -15px; }
+      div.container .container-header ul .arrow {
+        position: absolute;
+        font-size: 2.25em;
+        top: 208px;
+        left: 5%;
+        z-index: -1;
+        color: #0570BC; }
+      div.container .container-header ul li:first-child {
+        border-radius: 50px 0px 0px 50px; }
+      div.container .container-header ul li:last-child {
+        border-radius: 0px 50px 50px 0px; }
+      div.container .container-header ul li.active, div.container .container-header ul li:hover {
+        background-color: #0570BC;
+        color: white;
+        transition: 0.25s linear background-color; }
+  div.container .container-main {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    height: auto;
+    min-height: 400px; }
+  div.container .container-area {
+    background: #eee;
+    margin: 50px;
+    border: 2px solid #ccc;
+    min-height: 400px;
+    overflow-x: scroll; }
+    div.container .container-area .row {
+      padding: 15px;
+      border-bottom: 1px dashed #ccc; }
+      div.container .container-area .row label {
+        text-align: right;
+        padding: 0px 20px;
+        font-weight: bold;
+        width: 50%;
+        display: inline-block; }
+      div.container .container-area .row span {
+        text-align: left;
+        padding: 0px 20px;
+        width: 50%;
+        display: inline-block; }
+
+@media (max-device-width: 1280px) {
+  div.container .container-header ul li {
+    width: 25%; } }
+@media (max-device-width: 1024px) {
+  .container {
+    padding-right: 0px;
+    padding-left: 0px; }
+
+  div.container .container-header ul li {
+    width: 100%;
+    border-radius: 10px !important;
+    text-align: center;
+    display: block; }
+    div.container .container-header ul li .component-menu-item-text.longer {
+      top: 0px; }
+  div.container .container-area {
+    margin: 0px; }
+  div.container .container-header ul .arrow {
+    display: none; } }
+/*Firefox Styles*/
+@-moz-document url-prefix() {
+  body {
+    font-size: 16px; }
+
+  div.container .container-header ul li {
+    align-items: inherit; }
+  div.container .container-header ul .arrow {
+    top: 195px; } }
+/*Internet Explorer Styles*/
+@media screen\0 {
+  div.container .container-header ul li {
+    display: -ms-inline-flexbox; } }
+
+/*# sourceMappingURL=styles.css.map */

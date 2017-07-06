@@ -1,0 +1,444 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700,600);
+@import "../bower/bootstrap-sass-twbs/assets/stylesheets/bootstrap-compass";
+@import "../bower/bootstrap-sass-twbs/assets/stylesheets/bootstrap";
+
+html, body {
+    height: 100%;
+    -webkit-font-smoothing: antialiased;
+    font-family: 'Open Sans', sans-serif;
+    -webkit-overflow-scrolling: touch;
+}
+
+header {
+    background: #333;
+    color: #555;
+
+    .dropdown-menu {
+        top: 74px;
+        background: #ffcc33;
+        border-width: 0;
+    }
+}
+/* Set the fixed height of the footer here */
+
+footer {
+    height: 60px;
+    padding: 20px 0;
+    background-color: #414141;
+}
+
+h1 {
+    font-size: 50px;
+    text-align: center;
+}
+
+section .col-xs-12 {
+    color: #ffffff;
+    min-height: 200px;
+    height: auto !important;
+    height: 100%;
+    padding-top: 100px;
+    position: relative;
+}
+
+legend {
+    color: inherit;
+}
+
+
+/* Wrapper for page content to push down footer */
+
+#wrap {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -60px;
+    padding: 0 0 60px;
+}
+
+#socialMedia {
+    margin: 50px auto;
+}
+
+
+
+/* Custom page CSS
+-------------------------------------------------- */
+/* CUSTOMIZE THE NAVBAR
+-------------------------------------------------- */
+
+/* Special class on .container surrounding .navbar, used for positioning it into place. */
+
+.navbar-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+}
+
+/* Since positioning the image, we need to help out the caption */
+
+.carousel-caption {
+    z-index: 10;
+}
+
+/* Declare heights because of positioning of img element */
+
+#myCarousel .item {
+    height: 600px;
+    background-color: #bbb;
+}
+
+#myCarousel img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    height: 600px;
+}
+
+.container .credit {
+    margin: 20px 0;
+}
+
+.logo {
+    font-size: 40px;
+    position: absolute;
+    z-index: 1200;
+    color: #333;
+    top: 70px;
+    text-align: center;
+    width: 100%;
+}
+
+.img-logo {
+    display: block;
+    margin: 20px auto;
+}
+
+#nav {
+    width: 100%;
+    position: static;
+    top: 0px;
+    margin-bottom:0px;
+}
+
+#nav.affix {
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    + div {
+        margin-top: 52px;
+    }
+}
+
+#nav .dropdown-menu {
+    min-width: 100%;
+    color: #333333;
+}
+
+@media (min-width: 767px) {
+    .navbar-nav.nav-justified > li {
+        float: none;
+    }
+}
+
+.navbar-nav {
+    margin: 1px 1px;
+}
+
+
+/* customize nav style */
+
+.navbar-custom {
+    background-color: #2e2e2e;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-width: 0;
+}
+
+.navbar-custom .navbar-nav>li>a {
+    color: #ddd;
+}
+
+.navbar-custom .navbar-nav>li>a i {
+    margin-right: 6px;
+}
+
+.navbar-custom .dropdown-menu li>a:hover {
+    color: #eee;
+}
+
+.navbar-custom .navbar-nav li>a:hover, .navbar-nav li .open, .navbar-custom .navbar-nav .active a {
+    background-color: #000;
+}
+
+.navbar-custom .navbar-nav>.dropdown>a .caret {
+    border-top-color: #999;
+    border-bottom-color: #999;
+}
+
+.navbar-collapse.in {
+    overflow-y: visible;
+}
+
+.navbar-toggle {
+    outline: 0;
+}
+
+.divider {
+    height: 50px;
+}
+
+#map-canvas {
+    width: 100%;
+    height: 300px;
+    margin: 0;
+    padding: 15px;
+}
+
+.scroll-top {
+    position: fixed;
+    bottom: 0;
+    right: 6%;
+    z-index: 100;
+    background: #f2f3f2;
+    font-size: 24px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+
+.scroll-top a:link, .scroll-top a:visited {
+    color: #222;
+}
+
+.tab-pane .panel-default {
+    background-color: rgba(186, 172, 159, .3);
+    border: none;
+    border-radius: 0;
+}
+
+.panel {
+    color: #333333;
+}
+
+.nav-tabs li a:hover {
+    background-color: rgba(186, 172, 159, .1);
+}
+
+.nav-tabs li.active a, .nav-tabs li.active a:focus, .nav-tabs li.active a:hover {
+    background-color: rgba(186, 172, 159, .3);
+    border-width: 1px 1px 0;
+    border-radius: 0;
+}
+
+.nav-tabs {
+    border-bottom: none;
+}
+
+#itemisedBasket {
+    color: #333333;
+}
+
+div.coupon-box {
+    margin-top: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+@media (min-width: 992px) {
+    div.coupon-box {
+        margin-top: 0;
+        padding-top: 0;
+    }
+}
+
+.btn-group.select-email-template .btn {
+    background-color: transparent;
+}
+
+.btn-group.select-email-template .btn.active {
+    box-shadow: none;
+    background-color: transparent;
+}
+
+.btn-group.select-email-template .btn.active:after {
+    content: "\e013";
+    color: #1C962A;
+    font-family: 'Glyphicons Halflings';
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    font-size: 300%;
+}
+
+.btn-group.select-email-template .btn img {
+    padding: 2px;
+}
+
+.btn-group.select-email-template .btn.active img {
+    border: 2px solid #1C962A;
+    padding: 0;
+}
+
+.btn-group.select-email-template .btn {
+    margin-right: 15px;
+}
+
+.btn-group.select-email-template .btn:last-child {
+    margin-right: 0px;
+}
+
+.btn-group.select-post-card .btn {
+    background-color: transparent;
+}
+
+.btn-group.select-post-card .btn.active {
+    box-shadow: none;
+    background-color: transparent;
+}
+
+.btn-group.select-post-card .btn.active:after {
+    content: "\e013";
+    color: #1C962A;
+    font-family: 'Glyphicons Halflings';
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    font-size: 300%;
+}
+
+.btn-group.select-post-card .btn img {
+    padding: 2px;
+}
+
+.btn-group.select-post-card .btn.active img {
+    border: 2px solid #1C962A;
+    padding: 0;
+}
+
+.btn-group.select-post-card .btn {
+    margin-right: 15px;
+}
+
+.btn-group.select-post-card .btn:last-child {
+    margin-right: 0px;
+}
+
+
+.btn.btn-amount {
+    display: block;
+    text-align: center;
+    font-size: 24px;
+}
+
+.btn {
+    border-radius: 0;
+    border: medium none;
+    color: #fff;
+    font-size: 1em;
+    letter-spacing: 1px;
+    line-height: 1.5;
+    outline: medium none;
+    position: relative;
+    text-transform: uppercase;
+}
+
+.btn.btn-success {
+    background-color: #1c962a;
+}
+
+.btn.progress-button {
+    background-color: transparent !important;
+    border-radius: 0;
+    line-height: 3;
+}
+
+.btn.progress-button[disabled] {
+    opacity: 1;
+}
+
+.btn.progress-button .progress {
+    border-radius: 0;
+}
+
+.btn.btn-danger.progress-button .progress {
+    background-color: #ae1639;
+}
+
+.btn.btn-danger.progress-button .progress-inner {
+    background-color: #71102b;
+}
+
+.btn.btn-danger.progress-button[data-perspective] .content {
+    background-color: #96191a;
+}
+
+.btn.btn-danger.progress-button .content::before, .btn.btn-danger.progress-button .content::after {
+    color: #ffffff;
+}
+
+.btn.btn-success.progress-button .progress {
+    background-color: #1eae27;
+}
+
+.btn.btn-success.progress-button .progress-inner {
+    background-color: #167119;
+}
+
+.btn.btn-success.progress-button[data-perspective] .content {
+    background-color: #1c962a;
+}
+
+.btn.btn-success.progress-button .content::before, .btn.btn-success.progress-button .content::after {
+    color: #ffffff;
+}
+
+.btn-amount-container .btn-amount {
+    border-radius: 5px;
+    border: 0;
+    -webkit-transition: background-color 0.6s;
+    transition:         background-color 0.6s;
+}
+
+.list-inline svg {
+    width: 48px;
+    height: 48px;
+}
+
+#sender-message {
+    -webkit-transition: color 1s;
+    transition: color 1s;
+}
+
+#terms {
+    color: inherit;
+    text-decoration: underline;
+}
+
+select,
+input[type="datetime-local"],
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea{
+    -webkit-appearance: none;
+    border-radius:4px;
+}
+input[type="datetime-local"]{
+    padding-top:0px;
+}
+input[type="datetime-local"],select{
+    &.form-control{
+        background-image:url('/resources/dash-transactionportal/img/arrow.png');
+        background-repeat:no-repeat;
+        background-position:center right;
+        background-size:15px;
+    }
+}
+select {
+    &+.form-control-feedback{
+        right:10px;
+    }
+}

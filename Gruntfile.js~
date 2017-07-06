@@ -1,0 +1,62 @@
+module.exports = function (grunt) {
+    'use strict';
+
+    require('time-grunt')(grunt);
+
+    // Force use of Unix newlines
+    grunt.util.linefeed = '\n';
+
+    var env = {
+        cssDir: './public/css',
+
+        header: '/*! <%= pkg.name %> lib - v<%= pkg.version %> \n' +
+                ' * Compiled: <%= grunt.template.today("yyyy-mm-dd HH:MM") %> \n' +
+                ' */\n',
+        cssFiles: [
+            './assets/css/**/*.css'
+        ]
+    }
+
+    grunt.initConfig({
+        pkg: grunt.file.readJSON('package.json'),
+        env: env,
+        compass: {
+            dist: {
+                options: {
+                    sassDir: [
+                        'assets/sass'
+                    ],
+                    cssDir: 'assets/css',
+                    relativeAssets: true,
+                    outputStyle: 'expanded'
+                }
+            }
+        },
+        concat: {
+            css: {
+                options: {
+                    separator: '\n',
+                    stripBanners: true,
+                    banner: env.header
+                },
+                files: {
+                    '<%= env.cssDir %>/portal.css': env.cssFiles
+                }
+            }
+        },
+        cssmin: {
+            module: {
+                files: {
+                    '<%= env.cssDir %>/portal.min.css': '<%= env.cssDir %>/portal.css'
+                }
+            }
+        }
+    });
+
+    grunt.loadNpmTasks('grunt-contrib-compass');
+    grunt.loadNpmTasks('grunt-contrib-cssmin');
+    grunt.loadNpmTasks('grunt-contrib-concat');
+
+    grunt.registerTask('compilecss', ['compass', 'concat:css', 'cssmin', 'copy:font','copy:font2']);
+    grunt.registerTask('default', ['compilecss']);
+};

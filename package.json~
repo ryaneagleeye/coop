@@ -1,0 +1,11 @@
+{
+  "name": "co-op task",
+  "version": "0.0.1",
+  "dependencies": {
+    "grunt": "~0.4.4",
+    "grunt-contrib-compass": "^1.0.1",
+    "grunt-contrib-concat": "~0.5",
+    "grunt-contrib-cssmin": "~0.10"
+  },
+  "devDependencies": {}
+}
